@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+          app:cardCornerRadius="10dp"
+        app:cardElevation="2dp"
+        android:backgroundTint="#DAFFFB"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/settimeforecast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amarante"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:text="current time"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="temp"
+                android:textSize="21sp"
+                android:fontFamily="@font/abril_fatface"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:id="@+id/settempforecast"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/cloud_logo"
+                android:id="@+id/forecastsetlogo"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="at time speed"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:id="@+id/setspeedforecast"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00%"
+                android:fontFamily="@font/asset"
+                android:textSize="21sp"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:id="@+id/setpercenatgeforecast"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CEE6F3"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/settoolforlocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arbutus"
+            android:text="@string/location"
+            android:textAlignment="center"
+            android:id="@+id/setloction_txt"
+            android:textSize="21sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="22dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#EBF3E8"
+        android:id="@+id/cardview"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settoolforlocation">
+
+        <!-- Parent layout for arranging and display temperature -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <!-- Implement design for Search location Feature  -->
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_margin="10dp"
+              android:layout_height="wrap_content">
+              <com.google.android.material.textfield.TextInputEditText
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/search_edittxt"
+                  android:hint="Search location"
+                  android:padding="20dp"
+                  android:background="@drawable/editviewdesign"
+                  />
+              <ImageView
+                  android:layout_width="60dp"
+                  android:padding="8dp"
+                  android:id="@+id/search_logo"
+                  android:layout_margin="5dp"
+                  android:layout_height="55dp"
+                  android:layout_alignParentEnd="true"
+                  android:src="@drawable/search_logo"/>
+
+          </RelativeLayout>
+
+          <!-- display current temperature and its image -->
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="50dp"
+              android:orientation="vertical">
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/temp_txt"
+                  android:fontFamily="@font/bungee_inline"
+                  android:gravity="center"
+                  android:text="@string/current_temperature"
+                  android:padding="10dp"
+                  android:textSize="31sp" />
+
+              <!-- cloud image -->
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="100dp"
+                  android:id="@+id/currentSatusWeather_img"
+                  android:src="@drawable/cloud_logo"/>
+
+
+          </LinearLayout>
+      </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Recycle view for showing forecast -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/biryani_semibold"
+            android:padding="5dp"
+            android:text="@string/today_weather_forecast"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/forecastRecycleview"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
