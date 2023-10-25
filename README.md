@@ -6,7 +6,6 @@ This Android app provides weather forecasts for various locations using the Weat
 
 - [Demo](#demo)
 - [Features](#features)
--
 - [Contributing](#contributing)
 - [License](#license)
 
